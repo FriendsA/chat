@@ -1,1 +1,6 @@
-:root {}
+:root {
+    --color-blue: #409eff;
+
+    color: #333;
+    font-size: 14px;
+}

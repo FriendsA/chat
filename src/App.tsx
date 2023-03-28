@@ -1,15 +1,21 @@
-import { useState } from 'react'
-import { Button } from 'antd';
+import { useState } from 'react';
+import { ConfigProvider } from 'antd';
+import Chat from './pages/chat';
+
+const defaultTheme = {
+  autoInsertSpaceInButton: false
+}
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [data, setData] = useState(defaultTheme);
 
   return (
     <div className="App">
-      <Button type="primary" onClick={() => setCount((count) => count + 1)}>
-        count is {count}
-      </Button>
-    </div>
+      <ConfigProvider autoInsertSpaceInButton={false}>
+        <Chat />
+      </ConfigProvider>
+    </div >
   )
 }
 
