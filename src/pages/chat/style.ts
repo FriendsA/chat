@@ -13,6 +13,9 @@ export const TopWrapper = styled.div`
     width:100vw;
     padding:5px 20px;
     display: flex;
+    background-size: 4px 4px;
+    backdrop-filter: saturate(50%) blur(4px);
+
     align-items: center;
     justify-content:center;
 
@@ -69,6 +72,20 @@ export const ContentWrapper = styled.div`
   .content-content{
     width:1024px;  
   }
+  .empty{
+    margin-top: 30px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content:center;
+    background-color: rgba(144,147,153,.1);
+    .title{
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+  }
 `
 export const FooterWrapper = styled.div`
     position:fixed;
@@ -79,6 +96,8 @@ export const FooterWrapper = styled.div`
     align-items: center;
     justify-content: center;
     padding:10px;
+    backdrop-filter: saturate(50%) blur(4px);
+    background-color: radial-gradient(transparent 1px,#ffffff 1px);
     .footer-content{
         display: flex;
         align-items: center;
@@ -124,5 +143,53 @@ export const HumanTalkWrapper = styled.div`
     }
     .info{
         line-height:24px;
+    }
+`
+
+export const UpgradeWrapper = styled.div`
+    padding-top: 10px;
+    .pay-list{
+        display: flex;
+        margin-top: 20px;
+        .pay-item{
+            cursor: pointer;
+            margin:10px;
+            text-align: center;
+            padding:30px;
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, .12);
+            border:1px solid #e4e7ed;
+            border-radius: 4px;
+            &>div:first-child{
+                font-size:24px;
+                font-weight: bolder;
+            }
+            &>div:last-child{
+                margin-top: 30px;
+                font-weight: 500;
+            }
+            &.active{
+                border-color: #409eff;
+                background-color: #ecf5ff;
+            }
+        }
+    }
+    .pay-way{
+        color:#606266;
+        display: flex;
+        align-items: center;
+        margin-top:30px;
+        img{
+            height:18px;
+            margin-left: 20px;
+            margin-right: 10px;
+        }
+    }
+    .pay-info{
+        margin-top: 18px;
+        color: red;
+    }
+    .pay-btn{
+        padding: 20px 0 20px 0;
+        text-align: center;
     }
 `
